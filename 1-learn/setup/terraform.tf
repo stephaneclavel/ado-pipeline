@@ -12,12 +12,12 @@ terraform {
     }
 
     azuread = {
-      source = "hashicorp/azuread"
+      source  = "hashicorp/azuread"
       version = "~> 1.0"
     }
 
   }
-  
+
   backend "azurerm" {
     resource_group_name  = "tstate"
     storage_account_name = "tstate250790"
