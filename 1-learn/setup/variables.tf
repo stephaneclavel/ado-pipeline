@@ -1,7 +1,6 @@
 variable "ado_org_service_url" {
   type        = string
   description = "Org service url for Azure DevOps"
-  default     = "dev.azure.com/decidela"
 }
 
 variable "ado_github_repo" {
