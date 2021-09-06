@@ -1,6 +1,7 @@
 variable "ado_org_service_url" {
   type        = string
   description = "Org service url for Azure DevOps"
+  default     = "https://dev.azure.com/decidela"
 }
 
 variable "ado_github_repo" {
@@ -41,6 +42,7 @@ variable "az_container_name" {
 variable "az_state_key" {
   type        = string
   description = "Name of key in storage account for Terraform state"
+  default     = "1-learn-vnt.tfstate"
 }
 
 variable "az_client_id" {
