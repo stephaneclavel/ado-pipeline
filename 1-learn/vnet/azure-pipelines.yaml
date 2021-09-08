@@ -18,7 +18,6 @@ stages:
   - job: validate
     pool:
       vmImage: ubuntu-latest
-      demands: Limit -equals DisAbleParallel
     steps:
     - task: TerraformInstaller@0
       displayName: Install Terraform
@@ -49,7 +48,6 @@ stages:
   - job: plan
     pool:
       vmImage: ubuntu-latest
-      demands: Limit -equals DisAbleParallel
     steps:
     - task: TerraformInstaller@0
       displayName: Install Terraform
@@ -100,7 +98,6 @@ stages:
   - job: apply
     pool:
       vmImage: ubuntu-latest
-      demands: Limit -equals DisAbleParallel
     steps:
     - task: TerraformInstaller@0
       displayName: Install Terraform
