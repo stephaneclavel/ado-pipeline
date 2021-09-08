@@ -25,7 +25,7 @@ variable "ado_github_pat" {
 variable "prefix" {
   type        = string
   description = "Naming prefix for resources"
-  default     = "decidela"
+  default     = "adopipeline"
 }
 
 variable "az_location" {
