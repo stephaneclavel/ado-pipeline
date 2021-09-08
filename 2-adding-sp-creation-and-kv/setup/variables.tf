@@ -53,6 +53,7 @@ variable "az_client_id" {
 variable "az_client_secret" {
   type        = string
   description = "Client secret with permissions to create resources in Azure, use env variables"
+  sensitive   = true
 }
 
 variable "az_subscription" {
@@ -63,6 +64,17 @@ variable "az_subscription" {
 variable "az_tenant" {
   type        = string
   description = "Client ID Azure AD tenant, use env variables"
+}
+
+variable "CLIENT_ID" {
+  type        = string
+  description = "SP used to provision setup resources and create ADO AZRM endpoint, use env variables"
+}
+
+variable "CLIENT_SECRET" {
+  type        = string
+  description = "SP used to provision setup resources and create ADO AZRM endpoint, use env variables"
+  sensitive   = true
 }
 
 resource "random_integer" "suffix" {
