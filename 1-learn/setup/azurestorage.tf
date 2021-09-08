@@ -17,7 +17,7 @@ resource "azurerm_storage_account" "sa" {
 }
 
 resource "azurerm_storage_container" "ct" {
-  name                 = "terraform-state"
+  name                 = "ado-pipeline"
   storage_account_name = azurerm_storage_account.sa.name
 
 }
