@@ -28,7 +28,7 @@ variable "region" {
 variable "prefix" {
   type        = string
   description = "prefix for naming"
-  default     = "decidela"
+  default     = "adopipeline"
 }
 
 ###########################
