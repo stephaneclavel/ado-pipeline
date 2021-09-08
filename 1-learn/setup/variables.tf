@@ -53,6 +53,7 @@ variable "az_client_id" {
 variable "az_client_secret" {
   type        = string
   description = "Client secret with permissions to create resources in Azure, use env variables"
+  sensitive   = true
 }
 
 variable "az_subscription" {
