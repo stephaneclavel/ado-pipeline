@@ -65,10 +65,10 @@ locals {
     container-name   = var.az_container_name
     key              = var.az_state_key
     sas-token        = data.azurerm_storage_account_sas.state.sas
-    az-client-id     = azuread_application.resource_creation.application_id
-    az-client-secret = random_password.resource_creation.result
-    az-subscription  = data.azurerm_client_config.current.subscription_id
-    az-tenant        = data.azurerm_client_config.current.tenant_id
+    az-client-id     = var.az_client_id
+    az-client-secret = var.az_client_secret
+    az-subscription  = var.az_subscription
+    az-tenant        = var.az_tenant
   }
 
   azad_service_connection_sp_name = "${var.prefix}-service-connection-${random_integer.suffix.result}"
