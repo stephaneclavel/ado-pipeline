@@ -3,15 +3,15 @@
 variables:
   - group: variable-group2
   
-  trigger:
-    branches:
-      include:
-      - main
-    paths:
-      include:
-      - 2-adding-sp-creation-and-kv/vnet
+trigger:
+  branches:
+    include:
+    - main
+  paths:
+    include:
+    - 2-adding-sp-creation-and-kv/vnet
   
-  stages:
+stages:
   - stage: Validate
     displayName: Validate
     jobs:
