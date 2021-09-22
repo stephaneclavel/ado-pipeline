@@ -13,7 +13,7 @@ variable "ado_github_repo" {
 variable "ado_pipeline_yaml_path_1" {
   type        = string
   description = "Path to the yaml for the first pipeline"
-  default     = "2-adding-sp-creation-and-kv/vnet/azure-pipelines.yaml"
+  default     = "3-adding-checkov/vnet/azure-pipelines.yaml"
 }
 
 variable "ado_github_pat" {
@@ -25,7 +25,7 @@ variable "ado_github_pat" {
 variable "prefix" {
   type        = string
   description = "Naming prefix for resources"
-  default     = "adopipeline2setup"
+  default     = "adopipeline3setup"
 }
 
 variable "az_location" {
@@ -36,13 +36,13 @@ variable "az_location" {
 variable "az_container_name" {
   type        = string
   description = "Name of container on storage account for Terraform state"
-  default     = "ado-pipeline-2"
+  default     = "ado-pipeline-3"
 }
 
 variable "az_state_key" {
   type        = string
   description = "Name of key in storage account for Terraform state"
-  default     = "2-adding-sp.tfstate"
+  default     = "3-adding-checkov.tfstate"
 }
 
 variable "az_client_id" {
