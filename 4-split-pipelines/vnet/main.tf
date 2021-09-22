@@ -73,7 +73,6 @@ module "network" {
   depends_on = [azurerm_resource_group.vnet]
 }
 
-
 resource "azurerm_network_security_group" "allow_ssh" {
   name                = "allow_ssh"
   location            = var.region
