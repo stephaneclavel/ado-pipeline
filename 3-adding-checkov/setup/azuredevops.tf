@@ -40,7 +40,7 @@ resource "azuredevops_resource_authorization" "auth" {
 
 resource "azuredevops_variable_group" "variablegroup" {
   project_id   = azuredevops_project.project.id
-  name         = "variable-group2"
+  name         = "variable-group3"
   description  = "Variable group for pipelines"
   allow_access = true
 
