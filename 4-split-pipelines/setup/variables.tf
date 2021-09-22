@@ -14,8 +14,7 @@ variable "ado_pipeline_yaml_paths" {
   type        = map(string)
   description = "Path to the yaml for the pipelines"
   default = {
-    ci    = "4-split-pipelines/vnet/azure-pipeline-checkin.yaml"
-    pr    = "4-split-pipelines/vnet/azure-pipeline-pr.yaml"
+    ci    = "4-split-pipelines/vnet/azure-pipeline-ci.yaml"
     merge = "4-split-pipelines/vnet/azure-pipeline-merge.yaml"
   }
 }
