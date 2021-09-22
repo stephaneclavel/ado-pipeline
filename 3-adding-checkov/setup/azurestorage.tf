@@ -17,7 +17,7 @@ resource "azurerm_storage_account" "sa" {
 }
 
 resource "azurerm_storage_container" "ct" {
-  name                 = "ado-pipeline-2"
+  name                 = var.az_container_name
   storage_account_name = azurerm_storage_account.sa.name
 
 }
