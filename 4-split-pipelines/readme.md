@@ -2,16 +2,16 @@ Adapted from https://raw.githubusercontent.com/ned1313/terraform-tuesdays/main/2
 
 Creates:
 - ADO project & pipelines:
-  - CI & PR pipelines triggered on push on any branch but main. 
+  - CI pipeline triggered on push on any branch but main. 
   - Merge pipeline triggered on push on main branch (after pull request being merged)
 - Azure Key Vault and secrets necessary to run pipeline. 
 
-Pipelines will:
+CI Pipeline will:
 - TF validate
 - Run checkov tests against network then root modules
 - TF plan and publish plan file as an ADO artifact. 
 - Run checkov tests against generated plan
-- wait for approval (TF plan review)
+Merge Pipeline will:
 - TF apply previously produced plan file. 
 
 Notes: 
