@@ -11,6 +11,7 @@ CI Pipeline will:
 - Run checkov tests against network then root modules
 - TF plan and publish plan file as an ADO artifact. 
 - Run checkov tests against generated plan
+
 Merge Pipeline will:
 - TF apply previously produced plan file. 
 
