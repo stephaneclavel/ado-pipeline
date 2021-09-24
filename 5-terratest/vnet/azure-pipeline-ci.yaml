@@ -5,7 +5,7 @@ variables:
 
 trigger:
   branches:
-    exclude:
+    include:
     - main
   paths:
     include:
