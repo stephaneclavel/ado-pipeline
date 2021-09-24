@@ -22,7 +22,7 @@ terraform {
     resource_group_name  = "tstate"
     storage_account_name = "tstate250790"
     container_name       = "ado-pipeline"
-    key                  = var.az_state_key
+    key                  = "4-split-pipelines"
   }
 
 }
