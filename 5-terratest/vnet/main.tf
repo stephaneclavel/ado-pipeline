@@ -15,3 +15,4 @@ resource "azurerm_resource_group" "resource_group" {
   name     = "terratest-rg-${var.postfix}"
   location = var.location
 }
+
