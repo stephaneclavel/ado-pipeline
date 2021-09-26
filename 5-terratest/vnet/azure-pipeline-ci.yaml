@@ -13,7 +13,7 @@ trigger:
 
 stages:
 - stage: Validate
-  condition: ne(variables['Build.SourceBranch'],'refs/heads/main')
+  #condition: ne(variables['Build.SourceBranch'],'refs/heads/main')
   displayName: Validate
   jobs:
   - job: validate
@@ -105,7 +105,7 @@ stages:
     
 - stage: Plan
   displayName: Plan
-  condition: ne(variables['Build.SourceBranch'],'refs/heads/main')
+  #condition: ne(variables['Build.SourceBranch'],'refs/heads/main')
   jobs:
   - job: plan
     pool:
@@ -185,8 +185,8 @@ stages:
         failTaskOnFailedTests: false
         publishRunAttachments: true
 
-  # Destroy
-
+  # Run Terratest
+- stage: Terratest
     - task: TerraformCLI@0
       displayName: Destroy Terraform Deployment
       env:
@@ -201,5 +201,4 @@ stages:
         commandOptions: '-auto-approve'
 
 
-  # Run terratest tests
 
