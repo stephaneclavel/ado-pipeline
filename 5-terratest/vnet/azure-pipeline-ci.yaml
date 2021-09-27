@@ -30,15 +30,10 @@ stages:
         sudo mv terratest_log_parser /usr/local/bin
         # Display go version
 
-    - task: Go@0
-      inputs:
-        command: 'get'
-        arguments: '-d'
-        workingDirectory: '$(System.DefaultWorkingDirectory)/5-terratest/vnet/test'
-            
     # Run Terratest
     - bash: |
-        cd $(System.DefaultWorkingDirectory)/5-terratest/vnet
+        cd $(System.DefaultWorkingDirectory)/5-terratest/vnet/test
+        go mod init stephaneclavel/ado-pipeline
         go test -v ./test/ -timeout 30m | tee test_output.log
         terratest_log_parser -testlog test_output.log -outputdir test_output
       env:
