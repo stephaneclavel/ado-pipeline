@@ -34,7 +34,7 @@ stages:
       inputs:
         command: 'get'
         arguments: '-d'
-        workingDirectory: '$(System.DefaultWorkingDirectory)'
+        workingDirectory: '$(System.DefaultWorkingDirectory)/5-terratest/vnet/test'
             
     # Run Terratest
     - bash: |
