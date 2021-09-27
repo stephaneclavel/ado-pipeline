@@ -20,6 +20,15 @@ stages:
     pool:
       vmImage: ubuntu-20.04
     steps:
+
+    # Download Azure Key Vault secrets
+    - task: AzureKeyVault@1
+      inputs:
+        ConnectedServiceName: $(service_name)
+        keyVaultName: $(key_vault_name)
+        secretsFilter: '*'
+        runAsPreJob: false # Azure DevOps Services only
+
     # Install Terratest Log Parser
     - bash: |
         # Use curl to download the binary
