@@ -15,7 +15,7 @@ variable "ado_pipeline_yaml_paths" {
   description = "Path to the yaml for the pipelines"
   default = {
     ci    = "5-terratest/vnet/azure-pipeline-ci.yaml"
-    merge = "5-terratest/vnet/azure-pipeline-cd.yaml"
+    #merge = "5-terratest/vnet/azure-pipeline-cd.yaml"
   }
 }
 
