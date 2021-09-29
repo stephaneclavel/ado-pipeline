@@ -43,6 +43,7 @@ stages:
     - bash: |
         cd $(System.DefaultWorkingDirectory)/5-terratest/vnet/test
         go mod init stephaneclavel/ado-pipeline
+        echo "ARM_SUBSCRIPTION_ID" $ARM_SUBSCRIPTION_ID
         go test -v -timeout 30m | tee test_output.log
         terratest_log_parser -testlog test_output.log -outputdir test_output
       env:
