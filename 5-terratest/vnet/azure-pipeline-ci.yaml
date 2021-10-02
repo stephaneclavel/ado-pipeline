@@ -50,9 +50,9 @@ stages:
         ARM_CLIENT_SECRET: $(az-client-secret)
         ARM_SUBSCRIPTION_ID: $(az-subscription)
         ARM_TENANT_ID: $(az-tenant)
-        AZURE_CLIENT_ID: $(az-client-id)
-        AZURE_CLIENT_SECRET: $(az-client-secret)
-        AZURE_TENANT_ID: $(az-tenant)
+        #AZURE_CLIENT_ID: $(az-client-id)
+        #AZURE_CLIENT_SECRET: $(az-client-secret)
+        #AZURE_TENANT_ID: $(az-tenant)
 
     # Publish test results    
     - task: PublishTestResults@2
